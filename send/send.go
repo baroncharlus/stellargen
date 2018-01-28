@@ -2,17 +2,11 @@ package send
 
 import (
 	"fmt"
-
 	b "github.com/stellar/go/build"
 	"github.com/stellar/go/clients/horizon"
 )
 
-func main() {
-	// GBMANC7RRV5NHP3Q5BMPK56Q7OE5ULO3X7DZ5E5O5MERUNCSLEAPKNB5
-	from := SCBOAOKX4V75F3KEUKJIZIBT3GPRXAJGDWLUAEOIVP7P2NKO24NDCXT6
-	// SCQNAKR6IQJOR2FIIN3NHNZC3AR56TKGKVOBZ2MU5L5PCQUAQWFJOMBJ
-	to := GCALT5MCIN6GIRFUANWTO6D76BDAZHRFLRF7R45HWEM2GKK76JMHR4KO
-
+func Send(from, to string) {
 	tx, err := b.Transaction(
 		b.SourceAccount{AddressOrSeed: from},
 		b.TestNetwork,
